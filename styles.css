@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css2?family=B612:ital,wght@0,400;0,700;1,400;1,700&family=Bebas+Neue&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Emblema+One&family=Lora:ital,wght@0,400..700;1,400..700&family=Paytone+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 h1,
 span {
     letter-spacing: 3px
@@ -51,10 +51,6 @@ a {
     text-decoration: none
 }
 
-#contact,
-#faq {
-    padding: 3rem 0
-}
 
 .faqContainer,
 .package-info,
@@ -84,7 +80,7 @@ body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
-    font-family: var(--body-font);
+    font-family: "Roboto", sans-serif;
     font-size: var(--normal-font-size);
     background-color: var(--body-color)
 }
@@ -114,7 +110,7 @@ h6,
 p,
 span {
     text-wrap: balance;
-    font-family: var(--heading-font);
+    font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
     overflow-wrap: break-word
@@ -196,6 +192,11 @@ span {
     margin-inline: 1.5rem
 }
 
+section {
+    margin-bottom: 6rem; /* Consistent bottom margin for all sections */
+    padding: 3rem 0; /* Add vertical padding to all sections */
+  }
+
 .primary-color {
     color: var(--primary-color)
 }
@@ -203,6 +204,30 @@ span {
 .secondary-color {
     color: var(--secondary-color)
 }
+
+/* Webkit browsers (Chrome, Safari, newer Edge) */
+::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #ffffff; /* Black background for the track */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #ffffff; /* Slightly lighter color for the thumb */
+    border-radius: 5px; /* Rounded corners for the thumb */
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ffffff; /* Even lighter on hover for better UX */
+  }
+  
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #ffffff #000000; /* thumb color track color */
+  }
 
 .loader {
     width: 100vw;
@@ -954,9 +979,7 @@ input:checked+.gdpr-toggle-slider:before {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 3.5rem;
     background-color: #000;
-    padding: 3rem 0;
     overflow: hidden; /* Prevents any animation overflow */
 }
 
@@ -1153,16 +1176,17 @@ input:checked+.gdpr-toggle-slider:before {
     .read-more-btn {
         display: block;
         background: transparent;
-        border: 1px solid #ffffff;
+        border: 1px solid #777777;
         color: #ffffff;
-        padding: 5px 15px;
+        background-color: #212020;
+        padding: 0px 10px;
         margin: 0 auto;
-        border-radius: 20px;
+        border-radius: 3px;
         cursor: pointer;
-        font-size: 0.8rem;
+        font-size: 1.5rem;
         transition: all 0.3s ease;
+        transform: rotate(270deg); /* Flips the button upside down */
     }
-    
     .read-more-btn:hover {
         background: #ffffff;
         color: rgb(0, 0, 0);
@@ -1255,13 +1279,10 @@ input:checked+.gdpr-toggle-slider:before {
 
 #landing-video {
     width: 100%;
+    padding: 4rem 2rem; /* Add padding around the video */
+    margin: 5rem 0; /* Add margin above and below video section */
 }
 
-#pricing,
-.priceExplain li {
-    background-color: #fff;
-    height: auto
-}
 
 .my-video {
     height: auto;
@@ -1269,7 +1290,7 @@ input:checked+.gdpr-toggle-slider:before {
     box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
     display: block;
     padding: 15px;
-    background-color: white;
+    background-color: rgb(57, 54, 54);
 }
 
 .slider-arrow,
@@ -1279,7 +1300,7 @@ input:checked+.gdpr-toggle-slider:before {
 }
 
 .my-video:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, .3);
+    box-shadow: 0 8px 16px #777777;
     transition: box-shadow .3s
 }
 
@@ -1323,7 +1344,8 @@ input:checked+.gdpr-toggle-slider:before {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: 6rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 }
 
 .choose-us {
@@ -1374,7 +1396,7 @@ input:checked+.gdpr-toggle-slider:before {
     align-items: center;
     flex-direction: column;
     gap: 2rem;
-    margin-top: 2rem;
+    margin-top: 4rem;
 }
 .choose-us-card {
     display: flex;
@@ -1414,7 +1436,18 @@ input:checked+.gdpr-toggle-slider:before {
         width: 80%;
         color: #777777;
 }
+.choose-us-cards-container {
+    gap: 3rem;
+}
 @media screen and (min-width: 769px) {
+    .choose-us-cards-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
     .choose-us-intro {
         width: 80%;
     }
@@ -1442,8 +1475,6 @@ input:checked+.gdpr-toggle-slider:before {
         height: 600px;
     }
 
-
-
     .choose-us-intro > h2 {
         font-size: 2rem;
         padding-bottom: 0;
@@ -1465,6 +1496,7 @@ input:checked+.gdpr-toggle-slider:before {
         align-items: flex-start;
         width: 90%; /* Match width with cards container below */
         margin-bottom: 0rem; /* Add space between intro and cards */
+        padding-left: 1rem;
     }
     
     /* Create a container for the cards */
@@ -1518,6 +1550,164 @@ input:checked+.gdpr-toggle-slider:before {
 
 
 
+#pricing {
+    background-color: unset;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+
+}
+.pricing-intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    margin-bottom: 4rem;
+}
+.pricing-intro > span {
+
+}
+.pricing-intro > h4 {
+
+}
+
+.pricing-explained {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-direction: column;
+}
+
+.pricing-card {
+    width: 320px;
+    border-radius: 30px;
+    padding: 2rem 1rem;
+    background-color: rgb(0, 0, 0);
+    border: 3px solid #777777;
+}
+.pricing-info {
+    list-style-type: none;
+}
+.pricing-info > h4 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.75rem;
+    letter-spacing: 2px;
+    padding-bottom: 1rem;
+    font-weight: 900;
+}
+.pricing-services {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    padding-left: 0;
+    width: 100%;
+}
+.pricing-services > li {
+    display: flex;
+    color: white;
+}
+.pricing-services li > p {
+    margin-right: auto;
+    color: #ffffff;
+}
+.pricing-services li > svg {
+    height: 25px;
+    color: #0d47a1;
+}
+
+
+
+.pricing-prices {
+    padding-top: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+.pricing-prices > h2 {
+    color: white;
+}
+.pricing-prices > p {
+    color: #ffffff;
+    font-size: 1rem;
+    padding-top: 1.5rem;
+}
+
+.pricing-button {
+    width: 9em;
+    height: 3em;
+    font-size: 15px;
+    border: none;
+    overflow: hidden;
+    cursor: pointer;
+    font-weight: 900;
+    border-radius: 30px;
+    background-color: #0d47a1;
+    color: white;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+}
+
+.pricing-button::before {
+    content: "";
+    width: 0;
+    height: 3em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #0fb0d8 0, #47d5f9 100%);
+    transition: .5s;
+    display: block;
+    z-index: -1;
+    border-radius: 30px;
+}
+
+.pricing-button:hover::before {
+    width: 9em
+}
+
+@media screen and (min-width: 400px) {
+    .pricing-card {
+        width: 380px;
+    }
+}
+@media screen and (min-width: 1000px) {
+    .pricing-explained {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1527,7 +1717,7 @@ input:checked+.gdpr-toggle-slider:before {
 
   /* Mission section */
   #mission {
-    margin: 5rem 0;
+    padding: 4rem 0;
   }
   
   .mission-text {
@@ -1536,11 +1726,42 @@ input:checked+.gdpr-toggle-slider:before {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 4rem 0;
+    /* Your existing styles remain unchanged */
+  }
+  
+  /* Mobile view styles for mission text with read more functionality */
+  @media screen and (max-width: 768px) {
+    .mission-text p {
+      max-height: 7em; /* Show approximately 2-3 lines of text */
+      overflow: hidden;
+      position: relative;
+      transition: max-height 0.5s ease;
+    }
+    
+    .mission-text p.expanded {
+      max-height: 500px; /* Large enough to fit all content */
+    }
+    
+    .mission-text p::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 30px;
+      background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1));
+      pointer-events: none;
+      opacity: 1;
+      transition: opacity 0.3s ease;
+    }
+    
+    .mission-text p.expanded::after {
+      opacity: 0;
+    }
   }
   
   .mission-text > h2 {
-    border-bottom: 3px solid #ffa601;
+    border-bottom: 3px solid #0a3474;
     color: white;
     font-size: 2rem;
     line-height: 2.5rem;
@@ -1556,6 +1777,7 @@ input:checked+.gdpr-toggle-slider:before {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 2rem;
   }
   
   .mission-image > img {
@@ -1568,6 +1790,10 @@ input:checked+.gdpr-toggle-slider:before {
   
   .mission-image > img:hover {
     transform: rotate(-20deg) scale(1.1);
+  }
+
+  .read-more-btn {
+    margin-top: 1rem;
   }
 
   @media screen and (min-width: 769px) {
@@ -1642,7 +1868,7 @@ input:checked+.gdpr-toggle-slider:before {
     align-items: center;
     flex-direction: column;
     height: auto;
-    padding: 4rem 0;
+    padding-bottom: 4rem;
   }
   
   
@@ -1654,7 +1880,6 @@ input:checked+.gdpr-toggle-slider:before {
     color: white;
     border-radius: 10px;
     max-width: 800px;
-    padding: 2rem;
   }
   
   .contact-form {
@@ -1757,6 +1982,7 @@ input:checked+.gdpr-toggle-slider:before {
     }
     .contact-form {
         width: 50%;
+        padding-left: 2rem;
     }
     .contact-image {
         display: block;
@@ -1867,3 +2093,56 @@ hr.solid {
         width: 40%
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1000px) {
+    body::after {
+      content: '';
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 200px; /* Taller element to allow for more gradual fade */
+      /* Remove the box-shadow as we'll use only the gradient */
+      background: linear-gradient(to top, 
+                  rgba(0, 0, 0, 1),  /* Completely black at bottom */
+                  rgba(0, 0, 0, 0)); /* Completely transparent at top */
+      pointer-events: none;
+      z-index: 999;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+  
