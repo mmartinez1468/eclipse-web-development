@@ -1134,6 +1134,10 @@ input:checked+.gdpr-toggle-slider:before {
     box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
     outline: 0;
   }
+
+  #landingButton {
+    display: block;
+  }
   
   .landing-button > a {
     color: black;
@@ -2139,6 +2143,13 @@ hr.solid {
 
 
 
+
+
+
+
+
+
+  
 
 
 
