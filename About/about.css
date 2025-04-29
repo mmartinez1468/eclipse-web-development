@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 h1,
 span {
     letter-spacing: 3px
@@ -10,6 +10,10 @@ span {
     top: 0;
     left: 0
 }
+
+html {
+    scroll-behavior: smooth;
+  }
 
 .nav__link,
 .nav__logo {
@@ -672,6 +676,49 @@ input:checked+.gdpr-toggle-slider:before {
     background-color: #1178de
 }
 
+.landing-button {
+    background-color: #fff;
+    border: 1px solid #d5d9d9;
+    border-radius: 8px;
+    box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+    box-sizing: border-box;
+    color: #0f1111;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.25rem;
+    line-height: 29px;
+    font-weight: bolder;
+    padding: 0 10px 0 11px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    width: fit-content;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .landing-button:hover {
+    background-color: #f7fafa;
+    transform: translateY(-3px);
+    box-shadow: rgba(213, 217, 217, .8) 0 4px 8px 0;
+  }
+  
+  .landing-button:focus {
+    border-color: #008296;
+    box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+    outline: 0;
+  }
+
+  #landingButton {
+    display: block;
+  }
+
 @media screen and (max-width:340px) {
     .header-container {
         margin-inline: 1rem
@@ -905,12 +952,6 @@ input:checked+.gdpr-toggle-slider:before {
 
 
 /*********************** LANDING PAGE ***********************/
-.landing-image {
-    animation: floating 3s ease-in-out infinite;
-    position: relative;
-    transform-origin: center center;
-    will-change: transform; /* Optimization for animation performance */
-}
 
 @keyframes floating {
     0%, 100% {
@@ -919,14 +960,6 @@ input:checked+.gdpr-toggle-slider:before {
     50% {
         transform: translateY(-20px);
     }
-}
-
-/* Subtle rotation for more space-like floating effect */
-.landing-image img {
-    animation: subtle-rotation 15s ease-in-out infinite;
-    transform-origin: center center;
-    will-change: transform;
-    height: 150px;
 }
 
 @keyframes subtle-rotation {
@@ -944,286 +977,192 @@ input:checked+.gdpr-toggle-slider:before {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 3.5rem;
     background-color: #000;
     overflow: hidden; /* Prevents any animation overflow */
-}
-
-/* Enhanced glow effect for space floating feeling */
-.landing-image::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 15px;
-    bottom: -15px;
-    left: 0;
-    background: radial-gradient(ellipse at center, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 70%);
-    border-radius: 50%;
-    z-index: -1;
-    filter: blur(5px);
-    animation: glow 6s ease-in-out infinite;
-    will-change: opacity, transform;
-}
-
-@keyframes glow {
-    0%, 100% {
-        opacity: 0.6;
-        transform: scale(0.9);
-    }
-    50% {
-        opacity: 0.8;
-        transform: scale(1.1);
-    }
-}
-
-/* Optional: Add stars in the background for a space effect */
-#landingPage {
-    position: relative;
     height: 100vh;
 }
 
-#landingPage::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: 
-        radial-gradient(1px 1px at 25px 5px, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0)),
-        radial-gradient(1px 1px at 50px 25px, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0)),
-        radial-gradient(1px 1px at 125px 20px, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0)),
-        radial-gradient(1.5px 1.5px at 50px 75px, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0)),
-        radial-gradient(2px 2px at 175px 135px, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0)),
-        radial-gradient(2.5px 2.5px at 200px 50px, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
-    background-repeat: repeat;
-    background-size: 200px 200px;
-    opacity: 0.3;
-    z-index: 0;
-}
-
-/* Ensure the content is above the star background */
-.landing-image, .landing-intro {
-    position: relative;
-    z-index: 1;
-}
-
-/* Make the intro text glow slightly for cohesive space theme */
-.landing-intro {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-    margin-top: 2rem;
-    max-width: 90%;
-    color: white;
-    text-align: center;
-}
-.landing-intro > span {
-    background: linear-gradient(
-      45deg,
-      #ff0000,
-      #ff7300,
-      #fffb00,
-      #48ff00,
-      #00ffd5,
-      #002bff,
-      #7a00ff,
-      #ff00c8,
-      #ff0000
-    );
-    background-size: 400%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    animation: rainbow-text 60s linear infinite;
-  }
-  
-  @keyframes rainbow-text {
-    0% {
-      background-position: 0 0;
-    }
-    50% {
-      background-position: 400% 0;
-    }
-    100% {
-      background-position: 0 0;
-    }
-  }
-.landing-intro > h2 {
-    line-height: 2.5rem;
-    font-size: 2rem;
-    padding: 1rem 0;
-}
-/* Base styles for landing-intro paragraph */
-.landing-intro p {
-    color: #777;
-    position: relative;
-    overflow: hidden;
-    transition: max-height 0.5s ease;
-    padding-bottom: 1rem;
-}
-
-
-.landing-button {
-    background-color: #fff;
-    border: 1px solid #d5d9d9;
-    border-radius: 8px;
-    box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
-    box-sizing: border-box;
-    color: #0f1111;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 1.25rem;
-    line-height: 29px;
-    font-weight: bolder;
-    padding: 0 10px 0 11px;
-    position: relative;
-    text-align: center;
-    text-decoration: none;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    vertical-align: middle;
-    width: fit-content;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    display: none;
+.landing-quote {
+    display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .landing-button:hover {
-    background-color: #f7fafa;
-    transform: translateY(-3px);
-    box-shadow: rgba(213, 217, 217, .8) 0 4px 8px 0;
-  }
-  
-  .landing-button:focus {
-    border-color: #008296;
-    box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
-    outline: 0;
-  }
-  
-  .landing-button > a {
-    color: black;
-    text-decoration: none;
-    display: block;
-  }
-  .landing-button > svg {
-    height: 25px;
-    padding-right: .5rem;
-  }
-
-/* Mobile view styles */
-@media screen and (max-width: 768px) {
-    .landing-intro p {
-        max-height: 5em; /* Show approximately 2 lines of text */
-        margin-bottom: 2rem; /* Space for the "Read more" button */
-    }
-    
-    .landing-intro p.expanded {
-        max-height: 500px; /* Large enough to fit all content */
-    }
-    
-    .landing-intro p::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 30px;
-        background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1));
-        pointer-events: none;
-        opacity: 1;
-        transition: opacity 0.3s ease;
-    }
-    
-    .landing-intro p.expanded::after {
-        opacity: 0;
-    }
-    
-    .read-more-btn {
-        display: block;
-        background: transparent;
-        border: 1px solid #777777;
-        color: #ffffff;
-        background-color: #212020;
-        padding: 0px 10px;
-        margin: 0 auto;
-        border-radius: 3px;
-        cursor: pointer;
-        font-size: 1.5rem;
-        transition: all 0.3s ease;
-        transform: rotate(270deg); /* Flips the button upside down */
-    }
-    
-    
-    .read-more-btn.hidden {
-        display: none;
-    }
+    text-align: center;
+    flex-direction: column;
+    max-width: 800px;
+    padding: 20px;
 }
 
-/* Desktop view - always show full text */
-@media screen and (min-width: 769px) {
-    .read-more-btn {
-        display: none;
-    }
-    .landing-intro {
-        width: 80%;
-    }
-    .landing-intro > h2 {
-        font-size: 2rem;
-    }
-    .landing-intro > p {
-        font-size: 1rem;
+
+/* Animation styling */
+.typewriter {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    line-height: 1.75rem;
+    width: 90%;
+    color: #ffffff;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    font-family: "Lobster", sans-serif;
+}
+
+@media screen and (min-width: 384px) {
+    .typewriter {
+        font-size: 1.75rem;
     }
 }
-/***** Desktop Viewport *****/
-@media screen and (min-width: 1000px) {
-    #landingPage {
-        flex-direction: row-reverse;
-        padding: 0 3rem;
-    }
-    .landing-intro {
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        margin-right: auto;
-        width: 55%;
-        text-align: start;
-    }
-    .landing-intro > h2 {
-        font-size: 3rem;
+@media screen and (min-width: 427px) {
+    .typewriter {
+        font-size: 2.5rem;
         line-height: 3rem;
     }
-    .landing-button {
-        display: flex;
+    .landing-powered > span {
+        font-size: .6rem !important;
     }
-    .landing-image > img {
-        height: 500px;
-    }
-}
-@media screen and (min-width: 1142px) {
-    .landing-image > img {
-        padding-right: 3em;
+    .landing-powered-images > img {
+        height: 40px !important;
     }
 }
-@media screen and (min-width: 1335px) {
-    .landing-intro {
-        width: 40%;
+@media screen and (min-width: 557px) {
+    .typewriter {
+        font-size: 3rem;
+        line-height: 3rem;
+        width: 80%;
     }
-    .choose-us-explained {
-        width: 40%;
-    }
-    .landing-intro > h2 {
+}
+@media screen and (min-width: 719px) {
+    .typewriter {
         font-size: 4rem;
         line-height: 4rem;
-    }
-    .landing-intro > p {
-        font-size: 1.25rem;
-    }
-    .landing-image > img {
-        height: 500px;
-        padding-right: 5em;
+        width: 100%;
     }
 }
+
+/* Text container to preserve word wrapping */
+.typewriter-container {
+    display: inline;
+}
+
+.landing-powered > span {
+    color: white;
+    padding-top: 1rem;
+    font-size: .5rem;
+    text-transform: uppercase;
+}
+.landing-powered-images {
+    display: flex;
+    gap: 1rem;
+    padding-top: 1rem;
+}
+.landing-powered-images > img {
+    height: 25px;
+}
+
+/* Class for individual letter spans */
+.letter {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(10px) rotateY(90deg);
+    animation-name: fadeInRotate;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    font-family: "Neuton", serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+/* Add bigger space between words */
+.space {
+    margin-right: 0.25em;
+}
+
+/* Animation keyframes */
+@keyframes fadeInRotate {
+    0% {
+        opacity: 0;
+        transform: translateY(10px) rotateY(90deg);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translateY(5px) rotateY(45deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) rotateY(0deg);
+    }
+}
+.scrollPosition {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ /*  Scroll Down Icon */
+ .scroll-down {
+    height: 50px;
+    width: 30px;
+    border: 2px solid #ffffff;
+    position: relative;
+    left: 10%;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: #000000;
+    margin-top: 3em;
+ }
+ 
+ @media (min-width: 1701px) {
+    .scroll-down {
+       height: 70px;
+       width: 40px;
+       border: 2px solid #ffffff;
+       position: relative;
+       left: 10%;
+       border-radius: 50px;
+       cursor: pointer;
+       background-color: #000000;
+       margin-top: 3em;
+    }
+ }
+ .scroll-down::before,
+ .scroll-down::after {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    border: 2px solid #d1e3f1;
+    height: 10px;
+    width: 10px;
+    transform: translate(-50%, -50%) rotate(45deg);
+    border-top: transparent;
+    border-left: transparent;
+    animation: scroll-down 1s ease-in-out infinite;
+ }
+ .scroll-down::after {
+    top: 20%;
+    animation-delay: .3s;
+ }
+ :target::before {
+    content: "";
+    display: block;
+    height: 132px; /* Set this to match the height of your sticky nav */
+    margin-top: -132px; /* Negative value of the height */
+    pointer-events: none;
+ }
+ @keyframes scroll-down {
+    0% {
+       opacity: 0;
+    }
+    30% {
+       opacity: 1;
+    }
+    60% {
+       opacity: 1;
+    }
+    100% {
+       opacity: 0;
+       top: 90%;
+    }
+ }
+
 
 
 
@@ -1355,7 +1294,7 @@ input:checked+.gdpr-toggle-slider:before {
     flex-direction: column;
     align-items: center;
     gap: 5rem;
-    background-color: #0a3474;
+    background-color: #111111;
     padding: 0 2rem 5rem;
     position: relative
 }
