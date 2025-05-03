@@ -11,12 +11,12 @@
 
     <div class="loader"></div>
 
-   <!------------------ NAVBAR ------------------>
-   <header class="header"> 
+  <!------------------ NAVBAR ------------------>
+  <header class="header"> 
     <nav class="nav header-container">
       <div class="nav__data">
-          <a href="index.html" class="nav__logo" aria-label="Go back to landing page">
-            <img src="images/logo.jpg" alt="">
+          <a href="../index.html" class="nav__logo" aria-label="Go back to landing page">
+            <img src="/images/logo.jpg" alt="">
           </a>
           
           <div class="nav__toggle" id="nav-toggle">
@@ -32,12 +32,13 @@
       <!--=============== NAV MENU ===============-->
       <div class="nav__menu" id="nav-menu">
           <ul class="nav__list">
-            <li><a href="index.html" class="nav__link">Home</a></li>
+            <li><a href="/index.html" class="nav__link">Home</a></li>
 
             <!--=============== DROPDOWN 1 ===============-->
             
             
             <li><a href="./About/about.html" class="nav__link">About</a></li>
+            <li><a href="/Our Work/portfolio.html" class="nav__link">Portfolio</a></li>
             <li class="dropdown__item">
               <div class="nav__link">
                 Services <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="dropdown__arrow" fill="currentColor"><path d="M12 15.0006L7.75732 10.758L9.17154 9.34375L12 12.1722L14.8284 9.34375L16.2426 10.758L12 15.0006Z"></path></svg>
@@ -45,12 +46,12 @@
 
               <ul class="dropdown__menu">
                 <li>
-                  <a href="./webDev/webDev.html" class="dropdown__link">
+                  <a href="/Web Dev/webdev.html" class="dropdown__link">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="web-dev-icon" fill="currentColor"><path d="M13 18V20H17V22H7V20H11V18H2.9918C2.44405 18 2 17.5511 2 16.9925V4.00748C2 3.45107 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44892 22 4.00748V16.9925C22 17.5489 21.5447 18 21.0082 18H13Z"></path></svg> Web Development
                   </a>                          
                 </li> 
                 <li>
-                    <a href="Hosting/hosting.html" class="dropdown__link">
+                    <a href="/Hosting/hosting.html" class="dropdown__link">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="hosting-icon" fill="currentColor"><path d="M17 7C13.5705 7 10.6449 9.15804 9.50734 12.1903L11.3805 12.8927C12.2337 10.6185 14.4278 9 17 9C17.6983 9 18.3687 9.11928 18.992 9.33857C21.3265 10.16 23 12.3846 23 15C23 18.3137 20.3137 21 17 21H7C3.68629 21 1 18.3137 1 15C1 12.3846 2.67346 10.16 5.00804 9.33857C5.0027 9.22639 5 9.11351 5 9C5 5.13401 8.13401 2 12 2C15.242 2 17.9693 4.20399 18.7652 7.19539C18.1973 7.0675 17.6065 7 17 7Z"></path></svg> Hosting
                     </a>                          
                 </li>
@@ -102,7 +103,7 @@
           </ul>
       </div>
     </nav>
-   </header>
+  </header>
 
    <section id="landingPage">
     <div class="landing-image">
@@ -116,7 +117,7 @@
         </p>
         <button class="landing-button" role="button">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17 3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3H7V1H9V3H15V1H17V3ZM4 9V19H20V9H4ZM6 11H8V13H6V11ZM11 11H13V13H11V11ZM16 11H18V13H16V11Z"></path></svg>
-          <a href="">Book Free Consultation</a>
+          <a href="/Contact/contact.html">Book Free Consultation</a>
         </button>
     </div>
    </section>
@@ -125,7 +126,7 @@
    <section id="chooseUs">
     <div class="choose-us">
       <div class="choose-us-image">
-        <img src="images/megaphone_icon_126492.webp" alt="">
+        <img src="images/megaphone.png" alt="">
       </div>
     </div>
 
@@ -227,11 +228,11 @@
             </li>
             <li>
               <p>24/7 Support</p>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 10.5858L9.17157 7.75736L7.75736 9.17157L10.5858 12L7.75736 14.8284L9.17157 16.2426L12 13.4142L14.8284 16.2426L16.2426 14.8284L13.4142 12L16.2426 9.17157L14.8284 7.75736L12 10.5858Z"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" id="changeSVG" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 10.5858L9.17157 7.75736L7.75736 9.17157L10.5858 12L7.75736 14.8284L9.17157 16.2426L12 13.4142L14.8284 16.2426L16.2426 14.8284L13.4142 12L16.2426 9.17157L14.8284 7.75736L12 10.5858Z"></path></svg>
             </li>
             <li>
               <p>Lifetime Updates</p>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 10.5858L9.17157 7.75736L7.75736 9.17157L10.5858 12L7.75736 14.8284L9.17157 16.2426L12 13.4142L14.8284 16.2426L16.2426 14.8284L13.4142 12L16.2426 9.17157L14.8284 7.75736L12 10.5858Z"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" id="changeSVG" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 10.5858L9.17157 7.75736L7.75736 9.17157L10.5858 12L7.75736 14.8284L9.17157 16.2426L12 13.4142L14.8284 16.2426L16.2426 14.8284L13.4142 12L16.2426 9.17157L14.8284 7.75736L12 10.5858Z"></path></svg>
             </li>
           </ul>
         </div>
@@ -239,7 +240,7 @@
           <h2>$2000</h2>
           <p>+$25/mo Hosting</p>
         </div>
-        <a href="">
+        <a href="/Contact/contact.html">
           <button class="pricing-button">Get Started</button>
         </a>
       </div>
@@ -282,7 +283,7 @@
           <h2>$175</h2>
           <p>Per Month</p>
         </div>
-        <a href="">
+        <a href="/Contact/contact.html">
           <button class="pricing-button">Get Started</button>
         </a>
       </div>
@@ -313,11 +314,11 @@
             </li>
             <li>
               <p>24/7 Support</p>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 10.5858L9.17157 7.75736L7.75736 9.17157L10.5858 12L7.75736 14.8284L9.17157 16.2426L12 13.4142L14.8284 16.2426L16.2426 14.8284L13.4142 12L16.2426 9.17157L14.8284 7.75736L12 10.5858Z"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" id="changeSVG" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 10.5858L9.17157 7.75736L7.75736 9.17157L10.5858 12L7.75736 14.8284L9.17157 16.2426L12 13.4142L14.8284 16.2426L16.2426 14.8284L13.4142 12L16.2426 9.17157L14.8284 7.75736L12 10.5858Z"></path></svg>
             </li>
             <li>
               <p>$50/mo Unlimited Edits</p>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 10.5858L9.17157 7.75736L7.75736 9.17157L10.5858 12L7.75736 14.8284L9.17157 16.2426L12 13.4142L14.8284 16.2426L16.2426 14.8284L13.4142 12L16.2426 9.17157L14.8284 7.75736L12 10.5858Z"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" id="changeSVG" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 10.5858L9.17157 7.75736L7.75736 9.17157L10.5858 12L7.75736 14.8284L9.17157 16.2426L12 13.4142L14.8284 16.2426L16.2426 14.8284L13.4142 12L16.2426 9.17157L14.8284 7.75736L12 10.5858Z"></path></svg>
             </li>
           </ul>
         </div>
@@ -325,7 +326,7 @@
           <h2>$4000</h2>
           <p>Starting</p>
         </div>
-        <a href="">
+        <a href="/Contact/contact.html">
           <button class="pricing-button">Get Started</button>
         </a>
       </div>
@@ -352,7 +353,7 @@
             Founded by a 3 good friends, Eclipse Web Development transforms digital visions into powerful, functional websites that drive real results for our clients. Our mission is to deliver exceptional web solutions through technical excellence, innovative design, and a deep understanding of our clients' business needs.
         </p>
         <button class="landing-button">
-            <a href="">Work With Us</a>
+            <a href="/Contact/contact.html">Work With Us</a>
         </button>
     </div>
     <div class="mission-image">
@@ -362,7 +363,8 @@
 
    <section id="contact">                                     
     <div class="contact-us-wrapper">             
-      <form class="contact-form">                 
+      <form action="https://api.web3forms.com/submit" method="post" class="contact-form">  
+        <input type="hidden" name="access_key" value="5859c3e1-f867-4635-9559-d832ee856a88">               
           <div class="contact-form-intro">                 
           <h3>Contact Us!</h3>        
           <p>We're here to answer any questions or concerns you might have in order to help you on the path of website development!</p>         
@@ -392,7 +394,7 @@
           <button type="submit" class="landing-button" id="landingButton">Submit</button>             
       </form>   
       <div class="contact-image">
-        <img src="images/spaceman.png" alt="">
+        <img src="/images/spaceman.png" alt="">
       </div>          
     </div>              
    </section>
@@ -402,7 +404,7 @@
     <div class="footerLinks">
         <h4>Development</h4>
         <hr class="solid">
-        <a href="/webDev/webDev.html">
+        <a href="/Web Dev/webdev.html">
             <p>Website Development</p>
         </a>
         <a href="/Hosting/hosting.html">
@@ -411,7 +413,7 @@
         <a href="/Social Media/media.html">
             <p>Social Media Management</p>
         </a>
-        <a href="/ecommerce/ecommerce.html">
+        <a href="/E-commerce/ecommerce.html">
             <p>E-commerce</p>
         </a>
         <a href="/SEO/seo.html">
@@ -421,16 +423,16 @@
     <div class="footerLinks">
         <h4>Resources</h4>
         <hr class="solid">
-        <a href="/Contact Us/contact.html">
+        <a href="/Contact/contact.html">
             <p>Support</p>
         </a>
-        <a href="/Contact Us/contact.html">
+        <a href="/Contact/contact.html">
             <p>Free Consultation</p>
         </a>
-        <a href="/index.html">
+        <a href="index.html">
             <p>FAQ</p>
         </a>
-        <a href="/Contact Us/contact.html">
+        <a href="/Contact/contact.html">
             <p>Call Us</p>
         </a>
     </div>
@@ -440,13 +442,13 @@
         <a href="https://mmartinez1468.github.io/portfolio/">
             <p>Portfolio</p>
         </a>
-        <a href="/Contact Us/contact.html">
+        <a href="/Contact/contact.html">
             <p>Terms Of Service</p>
         </a>
-        <a href="/Contact Us/contact.html">
+        <a href="/Contact/contact.html">
             <p>Services</p>
         </a>
-        <a href="/Contact Us/contact.html">
+        <a href="/Contact/contact.html">
             <p>Refund Policy</p>
         </a>
     </div>

@@ -511,6 +511,46 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+document.addEventListener('DOMContentLoaded', function() {
+  // Select all containers that need animation
+  const pageSpeedContainers = document.querySelectorAll('.page-speed-container');
+  const pageSpeedWrapper = document.querySelector('.page-speed-wrapper');
+  
+  // Create the Intersection Observer
+  const pageSpeedObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      // Only trigger animation when the wrapper is actually visible
+      if (entry.isIntersecting) {
+        console.log('Page speed section is now visible - starting animations');
+        
+        // Add animation classes to all containers with appropriate delays
+        pageSpeedContainers.forEach((container, index) => {
+          const circle = container.querySelector('.circle-border');
+          const heading = container.querySelector('.page-speed h4');
+          
+          // Use setTimeout to respect the animation delays
+          setTimeout(() => {
+            circle.classList.add('animate');
+            heading.classList.add('animate');
+          }, index * 500); // 500ms delay between each container's animation
+        });
+        
+        // Stop observing after animations start
+        pageSpeedObserver.unobserve(entry.target);
+      }
+    });
+  }, {
+    // Stricter options for more reliable visibility detection
+    root: null,
+    rootMargin: '0px', 
+    threshold: 0.5 // Require at least 50% visibility
+  });
+  
+  // Observe the wrapper element instead of individual containers
+  if (pageSpeedWrapper) {
+    pageSpeedObserver.observe(pageSpeedWrapper);
+  }
+});
 
 
 
@@ -532,3 +572,56 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Select all containers that need animation
+  const containers = document.querySelectorAll('.page-speed-container');
+  
+  // Create the Intersection Observer
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      // When container becomes visible
+      if (entry.isIntersecting) {
+        // Find circle and heading elements within this container
+        const circle = entry.target.querySelector('.circle-border');
+        const heading = entry.target.querySelector('.page-speed h4');
+        
+        // Add class to start animation
+        circle.classList.add('animate');
+        heading.classList.add('animate');
+        
+        // Once animation has started, we can stop observing this element
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    // Options: trigger when at least 10% of the element is visible
+    threshold: 0.1
+  });
+  
+  // Start observing each container
+  containers.forEach(container => {
+    observer.observe(container);
+  });
+});
